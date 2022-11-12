@@ -19,6 +19,16 @@
         <h2>3. Visit <a th:href="@{/about}">Normal page</a></h2>
     </div>
 
+    <div sec:authorize="isAuthenticated()">
+        This content is only shown to authenticated users.
+      </div>
+      <div sec:authorize="hasRole('ADMIN')">
+        This content is only shown to administrators.
+      </div>
+      <div sec:authorize="hasRole('USER')">
+        This content is only shown to users.
+      </div>
+
 </div>
 <!-- /.container -->
 
