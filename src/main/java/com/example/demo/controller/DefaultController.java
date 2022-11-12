@@ -40,4 +40,9 @@ public class DefaultController {
         return "/error/403";
     }
 
+    @GetMapping("/admin/secret")
+    public String secret(){
+        return "/secret";
+    }
+
 }
